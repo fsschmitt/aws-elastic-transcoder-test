@@ -31,7 +31,7 @@ Based on this the main focus for the configuration of the video transcoding it s
 
 *Disclaimer: It can also be created through the ruby SDK, but I didn't focus on that as I didn't want to complicate a smooth transition that this could enable*
 
-The pipelines required to dispatch jobs to AWS Elastic Transcoder can also be created through the console or SDK. Since this one can be required to create new ones and delete old ones in runtime I have commented out an example code on how to create a new pipeline on the [lib file created](lib/aws-transcoder/elastic_transcoder.rb).
+The pipelines required to dispatch jobs to AWS Elastic Transcoder can also be created through the console or SDK. Since this one can be required to create new ones and delete old ones in runtime, check the [lib file created](lib/aws-transcoder/elastic_transcoder.rb) to see how to create a new pipeline on runtime.
 
 Being the interesting part the creation of new transcode jobs on-demand I have created a sample rails app that allows the user to see the current existing pipelines, see their current and completed jobs and also create a new job and dispatch it to the pipeline.
 
