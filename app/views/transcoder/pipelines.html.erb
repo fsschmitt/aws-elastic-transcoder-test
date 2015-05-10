@@ -1,0 +1,15 @@
+<h1>Pipeline list:</h1>
+<table>
+<tr>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Status</th>
+</tr>
+<% @pipelines.each do |pipeline| %>
+<tr>
+	<td><%= link_to pipeline[:id].to_s, "/transcoder/jobs/#{pipeline[:id]}" %></td>
+	<td><%= pipeline[:name] %></td>
+	<td><%= pipeline[:status] %></td>
+</tr>
+<% end %>
+</table>

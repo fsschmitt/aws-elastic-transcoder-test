@@ -1,0 +1,23 @@
+<h1>Jobs list:</h1>
+<table>
+<tr>
+	<th>ID</th>
+	<th>Count</th>
+	<th>Status</th>
+	<th>Duration</th>
+	<th>Output</th>
+</tr>
+<% @jobs.each do |job| %>
+	<tr>
+		<td><%= job[:id] %></td>
+		<td><%= job[:outputs].length %></td>
+		<td><%= job[:status] %></td>
+		<td><%= job[:timing][:finish_time_millis] - job[:timing][:start_time_millis] %></td>
+		<td>
+		<% job[:outputs].each do |output| %>
+			<%= output[:key] %> <br />
+		<% end %>
+		</td>
+	</tr>
+<% end %>
+</table>

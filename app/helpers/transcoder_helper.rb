@@ -1,0 +1,2 @@
+module TranscoderHelper
+end

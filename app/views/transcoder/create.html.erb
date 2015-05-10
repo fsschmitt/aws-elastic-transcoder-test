@@ -1,0 +1,27 @@
+<h1> Create new job </h1>
+
+<%= form_tag("execute", method: "get") do %>
+	<div>
+		<%= label_tag "Select pipeline: " %>
+		<%= select_tag :pipeline, options_for_select(@pipelines.collect{ |u| [u.name, u.id] }) %>
+	</div>
+	<div>
+		<%= label_tag "Input file (path from bucket root): " %>
+		<%= text_field_tag :input_file %>
+	</div>
+	<div>
+		<%= label_tag "Select Output preset: " %>
+		<%= select_tag :preset, options_for_select(@presets.collect{ |u| [u.name, u.id] }) %>
+	</div>
+	<div>
+		<%= label_tag "Output folder path (e.g. videos/output_transcoder/): " %>
+		<%= text_field_tag :output_folder %>
+	</div>
+	<div>
+		<%= label_tag "Output filename (e.g. sample.mp4): " %>
+		<%= text_field_tag :output_file %>
+	</div>
+	<div>
+		<%= submit_tag %>
+	</div>
+<% end %>
