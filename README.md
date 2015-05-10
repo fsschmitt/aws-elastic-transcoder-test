@@ -1,14 +1,13 @@
 # Small Rails app that uses AWS Elastic Transcoder
 ## It transcodes the video into other formats and also saves a thumbnail for it
 
---------------------------------------
+
 **Atention, necessary steps:**
 Set in your environment the current variables:
 - $S3_BUCKET_NAME (S3 bucket name where the videos are uploaded through paperclip)
 - $AWS_ACCESS_KEY_ID (Amazon user access key ID)
 - $AWS_SECRET_ACCESS_KEY (Amazon user secret access key)
 - $AWS_REGION (e.g. 'eu-west-1')
---------------------------------------
 
 ## Assumptions for this sample:
 * There is already a pipeline created, with the relevant information:
