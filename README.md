@@ -17,6 +17,8 @@ Set in your environment the current variables:
 	* IAM Role (with S3 Permissions)
 
 ## Approach:
+Since the procedure of getting the the files into the S3 bucket is not the main focus for this task, I have decided to focus entirely on dispatching the video transcoding jobs and to investigate if the final file location could be predicted to report back to paperclip.
+
 As I it was my first time using AWS Elastic Transcoder, but not my first time using AWS and therefore aws-sdk, the first step was to read the [available documentation at AWS](http://docs.aws.amazon.com/sdkforruby/api/Aws/ElasticTranscoder.html).
 
 After reading it and analysing it I have reached the conclusion that there are 3 main elements on the process of transcoding videos on AWS:
@@ -48,4 +50,4 @@ Being the interesting part the creation of new transcode jobs on-demand I have c
 
 #Result:
 
-With this I gain knowledge to be comfortable working with AWS Elastic Transcoder through their SDK, enabling to dispatch the transcoding jobs to the proper pipeline when required by the Jovoto platform through the insertion of a new video from a user. Enabling it to transcode, create thumbnails and more all within the AWS environment, not needing the current upload/download dependence from the servers to execute this jobs.
+With this I gain knowledge to be comfortable working with AWS Elastic Transcoder through their SDK, enabling to dispatch the transcoding jobs to the proper pipeline when required by the Jovoto platform through the insertion of a new video from a user. Enabling it to transcode, create thumbnails and more all within the AWS environment, not needing the current upload/download dependence from the servers to execute this jobs. All this by being able to set defaults and patterns that allows the video transcoding results to be where they are expected to in the end.
